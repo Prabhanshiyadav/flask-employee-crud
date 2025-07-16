@@ -2,17 +2,14 @@
 
 A full-featured **CRUD web application** built with **Flask** and **Tailwind CSS** to manage employee data. Includes smart filtering, search, salary insights, and an admin dashboard.
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Flask](https://img.shields.io/badge/Flask-Web_Framework-lightgrey)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-Styling-blueviolet)
-![Status](https://img.shields.io/badge/Status-Completed-brightgreen)
-
----
 
 ## 🚀 Features
 
 - 🔍 **Search & Filter** by name, department, or salary range
+
 - 🧑‍💼 **Add / Edit / Delete Employees**
+
+
 - 📊 **Admin Dashboard** with:
   - Total Employees
   - Average, Min & Max Salary
@@ -28,7 +25,7 @@ A full-featured **CRUD web application** built with **Flask** and **Tailwind CSS
 
 | Home Page | Admin Dashboard |
 |-----------|-----------------|
-| ![home](assets/home.png) | ![dashboard](assets/dashboard.png) |
+| ![home](assets/img1.png) | ![dashboard](assets/img2.png) |
 
 ---
 
