@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% block title %}Admin Dashboard{% endblock %}
+{% block content %}
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<h2 class="text-2xl font-bold mb-6">Admin Dashboard</h2>
+
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+  <div class="bg-white p-6 rounded shadow">
+    <p class="text-gray-500">Total Employees</p>
+    <h3 class="text-3xl font-bold text-blue-600">{{ total }}</h3>
+  </div>
+  <div class="bg-white p-6 rounded shadow">
+    <p class="text-gray-500">Average Salary</p>
+    <h3 class="text-3xl font-bold text-green-600">₹{{ avg }}</h3>
+  </div>
+  <div class="bg-white p-6 rounded shadow">
+    <p class="text-gray-500">Salary Range</p>
+    <h3 class="text-lg font-semibold">₹{{ min_salary }} – ₹{{ max_salary }}</h3>
+  </div>
+</div>
+
+<div class="bg-white p-6 rounded shadow mb-6">
+  <h4 class="text-xl font-semibold mb-4">Employees by Department</h4>
+  <ul class="list-disc pl-5 space-y-1">
+    {% for dept, count in dept_counts %}
+      <li><strong>{{ dept }}</strong>: {{ count }}</li>
+    {% endfor %}
+  </ul>
+</div>
+
+<div class="bg-white p-6 rounded shadow">
+  <h4 class="text-xl font-semibold mb-4">Recently Added Employees</h4>
+  <table class="w-full text-left">
+    <thead class="bg-gray-200">
+      <tr>
+        <th class="p-2">Name</th>
+        <th class="p-2">Department</th>
+        <th class="p-2">Salary</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for emp in recent_employees %}
+      <tr class="border-t hover:bg-gray-100">
+        <td class="p-2">{{ emp.name }}</td>
+        <td class="p-2">{{ emp.department }}</td>
+        <td class="p-2">₹{{ emp.salary }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}

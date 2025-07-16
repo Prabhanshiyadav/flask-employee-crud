@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Employee CRUD{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 font-sans flex flex-col min-h-screen">
+
+  <!-- Navbar -->
+  <nav class="bg-blue-600 text-white p-4">
+    <div class="container mx-auto flex justify-between items-center">
+      <a href="{{ url_for('home') }}" class="text-xl font-bold">EmployeeApp</a>
+      <div class="space-x-4">
+        <a href="{{ url_for('home') }}" class="hover:underline">Home</a>
+        <a href="{{ url_for('listemp') }}" class="hover:underline">Employees</a>
+        <a href="{{ url_for('create') }}" class="hover:underline">Add Employee</a>
+        <a href="{{ url_for('admin_dashboard') }}" class="hover:underline">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    <div class="my-4">
+      {% for category, message in messages %}
+        <div class="p-2 rounded bg-green-100 text-green-800">{{ message }}</div>
+      {% endfor %}
+    </div>
+  {% endif %}
+{% endwith %}
+
+
+  <!-- Main Content -->
+  <main class="flex-grow container mx-auto mt-6">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white text-center py-4 mt-10">
+    <p>&copy;2025 EmployeeApp. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

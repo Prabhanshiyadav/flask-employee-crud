@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}Edit Employee{% endblock %}
+{% block content %}
+
+<h2 class="text-xl font-bold mb-4">Edit Employee</h2>
+
+<form method="POST" class="bg-white shadow rounded p-6 space-y-4 w-full max-w-md">
+  <div>
+    <label class="block font-medium mb-1">Name:</label>
+    <input type="text" name="name" value="{{ emp.name }}" class="w-full border rounded px-3 py-2" required>
+  </div>
+  <div>
+    <label class="block font-medium mb-1">Department:</label>
+    <input type="text" name="department" value="{{ emp.department }}" class="w-full border rounded px-3 py-2" required>
+  </div>
+  <div>
+    <label class="block font-medium mb-1">Salary:</label>
+    <input type="number" step="any" name="salary" value="{{ emp.salary }}" class="w-full border rounded px-3 py-2" required>
+  </div>
+  <div class="flex justify-between">
+    <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700">Update</button>
+    <a href="{{ url_for('listemp') }}" class="text-gray-600 hover:underline">Cancel</a>
+  </div>
+</form>
+
+{% endblock %}
