@@ -93,5 +93,7 @@ def admin_dashboard():
                            dept_counts=dept_counts,
                            recent_employees=recent_employees)
 
-if __name__ == '__main__':
-    app.run(debug=True)
+
+
+if __name__ == "__main__":
+    app.run()
