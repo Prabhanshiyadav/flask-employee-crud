@@ -4,7 +4,6 @@ A full-featured **CRUD web application** built with **Flask** and **Tailwind CSS
 
 
 Code :  https://github.com/Prabhanshiyadav/flask-employee-crud
-Live demo : 
 
 
 ## 🚀 Features
