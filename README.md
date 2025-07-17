@@ -18,6 +18,8 @@ Code :  https://github.com/Prabhanshiyadav/flask-employee-crud
   - Average, Min & Max Salary
   - Employees by Department
   - Recently Added Employees
+
+
 - ✅ **Confirmation Modal** for deletions
 - 🌈 **Modern UI** with Tailwind CSS
 - 💾 **SQLite database** with SQLAlchemy ORM
