@@ -12,7 +12,6 @@ Code :  https://github.com/Prabhanshiyadav/flask-employee-crud
 
 - 🧑‍💼 **Add / Edit / Delete Employees**
 
-
 - 📊 **Admin Dashboard** with:
   - Total Employees
   - Average, Min & Max Salary
